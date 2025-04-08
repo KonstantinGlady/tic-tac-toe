@@ -1,30 +1,12 @@
+(define-data-var latest-game-id uint u0)
 
-;; title: tic-tac-toe
-;; version:
-;; summary:
-;; description:
-
-;; traits
-;;
-
-;; token definitions
-;;
-
-;; constants
-;;
-
-;; data vars
-;;
-
-;; data maps
-;;
-
-;; public functions
-;;
-
-;; read only functions
-;;
-
-;; private functions
-;;
-
+(define-map games 
+    uint 
+    {
+        player-one : principal,
+        player-two : (optional principal),
+        is-player-one-turn : bool,
+        bet-amount : uint,
+        board : (list 9 uint),
+        winner : (optonal principal)
+    })
