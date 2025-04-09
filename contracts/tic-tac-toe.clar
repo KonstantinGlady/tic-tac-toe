@@ -64,8 +64,8 @@
         }))
     )
     
-    (asserts! (is-none (get player-two original-game-data))(err ERR_GAME_CANNOT_BE_JOINED))
-    (asserts! (is-eq move u2)(err ERR_INVALID_MOVE))
+    (asserts! (is-none (get player-two original-game-data)) (err ERR_GAME_CANNOT_BE_JOINED))
+    (asserts! (is-eq move u2) (err ERR_INVALID_MOVE))
     (asserts! (validata-move original-board move-index move) (err ERR_INVALID_MOVE))
     (try! (stx-transfer? (get bet-amount original-game-data) contract-caller THIS_CONTRACT))
     
