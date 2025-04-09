@@ -69,7 +69,7 @@
     (asserts! (validate-move original-board move-index move) (err ERR_INVALID_MOVE))
     (try! (stx-transfer? (get bet-amount original-game-data) contract-caller THIS_CONTRACT))
     
-    (maps-set games game-id game-data)
+    (map-set games game-id game-data)
     (print { action: "join-game", data: game-data})
     (ok game-id)
     )
