@@ -129,7 +129,7 @@
     (if is-now-winner (try! (as-contract (stx-transfer? 
             (* u2 (get bet-amount game-data)) tx-sender player-turn))) false)
 
-    (maps-set games game-id game-data)
+    (map-set games game-id game-data)
     (print {action: "play", data: game-data})
     (ok game-id)
 ))
