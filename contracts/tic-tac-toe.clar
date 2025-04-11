@@ -123,7 +123,7 @@
     )
 
     (asserts! (is-eq player-turn contract-caller) (err ERR_NOT_YOUR_TURN))
-    (asserts! (is-eq move expected-turn) (err ERR_INVALID_MOVE))
+    (asserts! (is-eq move expected-move) (err ERR_INVALID_MOVE))
     (asserts! (validate-move original-board move-index move) (err ERR_INVALID_MOVE))
 
     (if is-now-winner (try! (as-contract (stx-transfer? 

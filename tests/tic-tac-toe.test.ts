@@ -155,15 +155,15 @@ describe("Tic Tac Toe Tests", () => {
     const gameData = simnet.getMapEntry("tic-tac-toe", "games", Cl.uint(0));
     expect(gameData).toBeSome(
       Cl.tuple({
-        "player-one": Cl.principal("alice"),
-        "player-two": Cl.some(Cl.principal("bob")),
+        "player-one": Cl.principal(alice),
+        "player-two": Cl.some(Cl.principal(bob)),
         "is-player-one-turn": Cl.bool(true),
         "bet-amount": Cl.uint(100),
-        "board": Cl.list([
+
+        board: Cl.list([
           Cl.uint(1),
           Cl.uint(1),
           Cl.uint(0),
-          Cl.uint(2),
           Cl.uint(2),
           Cl.uint(2),
           Cl.uint(2),
@@ -172,7 +172,7 @@ describe("Tic Tac Toe Tests", () => {
           Cl.uint(1),
         ]),
         
-        "winner": Cl.some(Cl.principal(bob)),
+        winner: Cl.some(Cl.principal(bob)),
       })
     );
   });
