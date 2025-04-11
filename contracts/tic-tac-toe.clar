@@ -38,7 +38,7 @@
         })
     )
     
-    (asserts! (> bett-amount u0) (err ERR_MIN_BET_AMOUNT))
+    (asserts! (> bet-amount u0) (err ERR_MIN_BET_AMOUNT))
     (asserts! (is-eq move u1) (err ERR_INVALID_MOVE))
     (asserts! (validate-move starting-board move-index move) (err ERR_INVALID_MOVE))
 
